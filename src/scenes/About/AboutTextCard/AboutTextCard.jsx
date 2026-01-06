@@ -4,29 +4,34 @@ const AboutTextCard = () => {
   return (
     <div className={s.card}>
       <p style={{ textAlign: 'justify' }}>
-        Hi Everyone, I am{' '}
-        <span className={s.purple}>Snaichuk Volodymyr, </span>
-        <br />a software engineer currently based in{' '}
-        <span className={s.purple}>Krakow, Poland.</span>
-        <br />
-        <br />
-        I have a Bachelor's degree in Computer Science and
-        <br />
-        Master's degree in Project Management from Ternopil Academy.
-        <br />
-        <br />
-        My hobbies beyond programming:
-      </p>
+          
+      Hi! I am <span className={s.purple}>Mikael Meander,</span>
+      <br />
+      a motivated Master’s student in Interaction Design <br /> at Umeå University, currently based in <span className={s.purple}>Sweden.</span>
+      <br />
+      <br />
+      I am a happy and outgoing, with a passion for learning <br /> new skills and collaborating with others.
+      <br />
+      <br />
+      In my free time, I enjoy exploring  <br />nature and traveling to new places.
+      <br />
+      <br />
+      Beyond UX design, my hobbies include:
+    </p>
+
 
       <ul style={{ marginLeft: 14 }}>
         <li className={s.aboutActivity}>
-          - Playing Games
+          - Sport
         </li>
         <li className={s.aboutActivity}>
-          - Reading
+          - spending time with family and friends
         </li>
         <li className={s.aboutActivity}>
           - Travelling
+        </li>
+        <li className={s.aboutActivity}>
+          - Photographing
         </li>
       </ul>
     </div>

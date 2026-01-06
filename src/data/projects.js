@@ -1,11 +1,11 @@
 const data = [
   {
     id: '1',
-    title: 'SallyPOS',
+    title: 'Menuver',
     description:
-      'Point of Sale (POS) for iOS and Android. Optimized for Smartphones and Tablets. SallyPOS is the ultimate tool to help manage your sales and streamline your operations.',
+      'Menuver is a startup me and two of my classmates is doing where we are  building a platform for people with celiac desease to find restaurants that they can trust,',
     image: {
-      src: 'https://res.cloudinary.com/dx6tl6aa2/image/upload/v1721484550/portfolio/projects/SallyPOS/1111_mfdzqt.png',
+      src: '/images/menuver.png',
       placeholderSrc:
         'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzIDIiPjwvc3ZnPg==',
     },
@@ -27,11 +27,11 @@ const data = [
   },
   {
     id: '2',
-    title: 'React Native Yoco',
+    title: 'Brainfunc',
     description:
-      'Core maintainer and contributor of React Native native module for Yoco SDK. It allows app developers to integrate with Yoco card machines to accept in-person payments from within their application.',
+      'A student project where we worked close with a company that wanted an application for their ide, to help elders work with their body and brain to not get braingsickness',
     image: {
-      src: 'https://res.cloudinary.com/dx6tl6aa2/image/upload/v1727717856/portfolio/projects/react-native-yoco_b3bjph.png',
+      src: 'images/brainfunc.png',
       placeholderSrc:
         'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzIDIiPjwvc3ZnPg==',
     },
@@ -52,9 +52,9 @@ const data = [
   },
   {
     id: '3',
-    title: 'Syntho',
+    title: 'Filmdle',
     description:
-      'Syntho is an electronic music education application. Connect with like minded users as you build your own custom profile, communicate and share music via the newsfeed.',
+      'A daily guessing game where you get 6 diffrent clues and guesses and should try to guess the right movie of the day',
     image: {
       src: 'https://res.cloudinary.com/dx6tl6aa2/image/upload/v1671564532/portfolio/projects/Syntho/Screenshot_2022-12-20_at_21.26.17_1_c59hzo.jpg',
       placeholderSrc:

@@ -19,14 +19,13 @@ const IntroSection = () => {
 
           <div className={s.description}>
             <p>
-              I'm a React Native Developer with <b>3 years</b> of
-              experience <br />
-              creating mobile apps for the iOS, Android, and Web
-              platforms.
+              I'm studying master of science in interaction design at Umeå University,<br />
+              During my studies, I have learned a lot about user experience and design, <br />
+              and my goal is to become a UX desginer/frontend developer after my graduation.
             </p>
 
             <p>
-              My skills include proficiency in{' '}
+              My skills include {' '}
               <i>
                 <b className={s.purple}>
                   TypeScript, React, React Native,
@@ -62,7 +61,7 @@ const IntroSection = () => {
         <ul className={s.socialLinks}>
           <li className={s.socialLink}>
             <a
-              href="https://github.com/vsnaichuk"
+              href="https://github.com/ens20mlr"
               target="_blank"
               rel="noreferrer"
               className={s.socialIcon}
@@ -71,31 +70,11 @@ const IntroSection = () => {
               <AiFillGithub />
             </a>
           </li>
+          
+         
           <li className={s.socialLink}>
             <a
-              href="https://www.facebook.com/Snaychuk"
-              target="_blank"
-              rel="noreferrer"
-              className={s.socialIcon}
-              aria-label="facebook"
-            >
-              <FaFacebookSquare />
-            </a>
-          </li>
-          <li className={s.socialLink}>
-            <a
-              href="https://t.me/snaichuk_v"
-              target="_blank"
-              rel="noreferrer"
-              className={s.socialIcon}
-              aria-label="telegram"
-            >
-              <FaTelegramPlane />
-            </a>
-          </li>
-          <li className={s.socialLink}>
-            <a
-              href="https://www.linkedin.com/in/volodymyr-snaichuk-74a389124/"
+              href="https://www.linkedin.com/in/mikaelmeader/"
               target="_blank"
               rel="noreferrer"
               className={s.socialIcon}

@@ -1,6 +1,13 @@
 .content {
   padding: 9rem 9rem 3rem;
 }
+.githubGallery {
+  width: 100%;
+  height: 600px; // viktigt! Annars får sfären 0 höjd
+  position: relative;
+  margin-top: 2rem;
+}
+
 
 .about {
   padding-left: .2rem;

@@ -10,7 +10,7 @@ const MainSection = () => {
       <div className={s.header}>
         <div className={s.greetingContainer}>
           <h2 className={s.title}>
-            Greetings!
+            Hello!
           </h2>
           <img 
             src={handIcon} 
@@ -20,14 +20,16 @@ const MainSection = () => {
 
         <h1 className={s.mainTitle}>
           I'M
-          <strong className={s.mainName}> SNAICHUK VOLODYMYR</strong>
+          <strong className={s.mainName}> Mikael Meander</strong>
         </h1>
 
         <div className={s.typewriter}>
           <Typewriter
             strings={[
-              'Continuously Learning',
-              'React Native Developer',
+              'UX-designer',
+              'Driven',
+              'Front-end developer',
+              'Loves to learn new things',
             ]}
             wrapperClassName={s.typewriterInner}
             cursorClassName={s.typewriterCursor}

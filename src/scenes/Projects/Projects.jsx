@@ -11,7 +11,7 @@ const Projects = () => {
           Recent <strong className={s.purple}>Projects</strong>
         </h1>
         <p className={s.subtitle}>
-          Take a look at some of my recent work.
+          Take a look at some of my work during my studies.
         </p>
 
         <ul className={s.projects}>

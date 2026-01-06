@@ -1,14 +1,31 @@
-import aboutPromoImg from '../../assets/about-promo.svg';
 import BaseLayout from '../../layouts/BaseLayout/BaseLayout';
 import s from './About.module.scss';
 import AboutTextCard from './AboutTextCard/AboutTextCard';
-import GithubActivity from './GithubActivity/GithubActivity';
 import TechSkills from './TechSkills/TechSkills';
+import BounceCards from '../components/BounceCards';
+import GithubActivity from './GithubActivity/GithubActivity'; // DomeGallery längst ner
 
 const About = () => {
+  const images = [
+    '/images/me1.png',
+    '/images/me-2.jpg',
+    '/images/me-3.jpg',
+    '/images/me-4.jpg',
+    '/images/me-5.jpg',
+  ];
+
+  const transformStyles = [
+    'rotate(6deg) translate(-140px)',
+    'rotate(2deg) translate(-70px)',
+    'rotate(-4deg)',
+    'rotate(3deg) translate(70px)',
+    'rotate(-6deg) translate(140px)',
+  ];
+
   return (
     <BaseLayout>
       <div className={s.content}>
+        {/* About sektion */}
         <div className={s.about}>
           <div className={s.aboutDescription}>
             <h1 className={s.title}>
@@ -18,22 +35,29 @@ const About = () => {
           </div>
 
           <div className={s.aboutImg}>
-            <img src={aboutPromoImg} alt="about" />
+            <BounceCards
+              images={images}
+              transformStyles={transformStyles}
+              containerWidth={400}
+              containerHeight={400}
+              enableHover={true}
+            />
           </div>
         </div>
 
+        {/* Skills */}
         <h2 className={s.skills}>
           My <b className={s.purple}>Skills</b>
         </h2>
         <TechSkills />
 
-        <a href='https://github.com/vsnaichuk'>
-          <h2 className={s.githubActivity}>
-            My <b className={s.purple}>Coding</b> Journey
-          </h2>
-        
+        {/* DomeGallery längst ner */}
+        <h2 className={s.githubActivity}>
+          My <b className={s.purple}>Photos</b>
+        </h2>
+        <div className={s.githubGallery}>
           <GithubActivity />
-        </a>
+        </div>
       </div>
     </BaseLayout>
   );

@@ -1,38 +1,16 @@
-import { useEffect, useRef, useState } from 'react';
+import { useRef } from 'react';
 import DownloadIcon from '../../assets/download.svg?react';
 import FilesIcon from '../../assets/resume-files.svg?react';
 import Button from '../../components/UIElements/Button/Button';
-import LinerProgress from '../../components/UIElements/LinerProgress/LinerProgress';
 import BaseLayout from '../../layouts/BaseLayout/BaseLayout';
 import s from './Resume.module.scss';
-//react-pdf
-import { Document, Page, pdfjs } from 'react-pdf';
-import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
+import cvImage from '/images/cv.png'; // <-- din PNG här
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
-const resumeLink =
-  'https://raw.githubusercontent.com/vsnaichuk/vsnaichuk/master/CV.pdf';
+const resumeLink = cvImage; // Kan fortfarande använda samma länk för nedladdning
 
 const Resume = () => {
-  const pdfWrapper = useRef(null);
-  const [pdfPageWidth, setPdfPageWidth] = useState(null);
-  useEffect(() => {
-    setPdfPageWidth(
-      pdfWrapper.current?.getBoundingClientRect().width || null,
-    );
-  }, []);
-
-  const removeTextLayerOffset = () => {
-    const textLayers = document.querySelectorAll(
-      '.react-pdf__Page__textContent',
-    );
-    textLayers.forEach((layer) => {
-      const { style } = layer;
-      style.top = '0';
-      style.left = '0';
-      style.transform = '';
-    });
-  };
+  const imgWrapper = useRef(null);
 
   return (
     <BaseLayout>
@@ -55,23 +33,16 @@ const Resume = () => {
         >
           <DownloadIcon fill="#fff" />
           <span className={s.downloadText}> download resume</span>
-          <span className={s.filename}>.pdf</span>
+          <span className={s.filename}>.png</span>
         </Button>
 
-        <div className={s.pdfWrapper} ref={pdfWrapper}>
-          <Document
-            loading={<LinerProgress />}
-            file={{
-              url: resumeLink,
-            }}
-          >
-            <Page
-              onLoadSuccess={removeTextLayerOffset}
-              loading={<LinerProgress />}
-              width={pdfPageWidth}
-              pageNumber={1}
-            />
-          </Document>
+        <div className={s.pdfWrapper} ref={imgWrapper}>
+          <LazyLoadImage
+            src={cvImage}
+            alt="My Resume"
+            effect="blur"
+            width="100%"
+          />
         </div>
       </div>
     </BaseLayout>
