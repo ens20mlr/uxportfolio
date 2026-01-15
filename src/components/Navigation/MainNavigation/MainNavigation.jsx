@@ -38,7 +38,7 @@ const MainNavigation = () => {
 
             <BtnToggleTheme className={s.mobile} />
           </>
-        )}
+        )}s
       </Media>
 
       <SideDrawer show={isDrawerOpen} onClose={toggleDrawer}>

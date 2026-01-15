@@ -8,10 +8,10 @@ import GithubActivity from './GithubActivity/GithubActivity'; // DomeGallery lä
 const About = () => {
   const images = [
     '/images/me1.png',
-    '/images/me-2.jpg',
-    '/images/me-3.jpg',
-    '/images/me-4.jpg',
-    '/images/me-5.jpg',
+    '/images/img1.jpg',
+    '/images/img2.png',
+    '/images/me.jpeg',
+    '/images/img7.png',
   ];
 
   const transformStyles = [
@@ -50,14 +50,17 @@ const About = () => {
           My <b className={s.purple}>Skills</b>
         </h2>
         <TechSkills />
+ 
+       {/*
+<h2 className={s.githubActivity}>
+  My <b className={s.purple}>Photos</b>
+</h2>
 
-        {/* DomeGallery längst ner */}
-        <h2 className={s.githubActivity}>
-          My <b className={s.purple}>Photos</b>
-        </h2>
-        <div className={s.githubGallery}>
-          <GithubActivity />
-        </div>
+<div className={s.githubGallery}>
+  <GithubActivity />
+</div>
+*/}
+
       </div>
     </BaseLayout>
   );
