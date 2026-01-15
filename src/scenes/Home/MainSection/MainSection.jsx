@@ -1,6 +1,6 @@
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import handIcon from '../../../assets/hand.png';
-import homeMainIcon from '../../../assets/home-main.svg';
+const profileImage = '/images/me.jpeg';
 import Typewriter from '../../../components/UIElements/Typewriter/Typewriter';
 import s from './MainSection.module.scss';
 
@@ -40,13 +40,14 @@ const MainSection = () => {
       <div className={s.spacer} />
 
       <LazyLoadImage
-        alt="home-img"
+        alt="Photo of Mikael Meander"
         effect="blur"
-        src={homeMainIcon}
-        wrapperClassName={s.homeMainIcon}
-        width="396"
-        height="400"
+        src={profileImage}
+        wrapperClassName={s.profileImage}
+        width="360"
+        height="360"
       />
+
     </section>
   );
 };

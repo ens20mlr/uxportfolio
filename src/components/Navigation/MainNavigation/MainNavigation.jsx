@@ -5,7 +5,7 @@ import NavLinks from '../NavLinks/NavLinks';
 import SideDrawer from '../SideDrawer/SideDrawer';
 import Burger from '../Burger/Burger';
 import BtnToggleTheme from '../../BtnToggleTheme/BtnToggleTheme';
-import Logo from '../../Logo/Logo';
+import { Link } from 'react-router-dom';
 
 const MainNavigation = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -16,7 +16,10 @@ const MainNavigation = () => {
 
   return (
     <>
-      <Logo className={s.desktop} />
+      {/* Desktop name */}
+      <Link to="/" className={`${s.name} ${s.desktop}`}>
+        Mikael Meander
+      </Link>
 
       <nav className={s.desktop}>
         <NavLinks />
@@ -28,7 +31,10 @@ const MainNavigation = () => {
           <>
             <Burger onClick={toggleDrawer} />
 
-            <Logo className={s.mobile} />
+            {/* Mobile name */}
+            <Link to="/" className={`${s.name} ${s.mobile}`}>
+              Mikael Meander
+            </Link>
 
             <BtnToggleTheme className={s.mobile} />
           </>

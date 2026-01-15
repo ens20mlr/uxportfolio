@@ -1,32 +1,25 @@
 import s from './ProjectCard.module.scss';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
-const ProjectCard = ({ id, image, title, description }) => {
-  const location = useLocation();
-
+const ProjectCard = ({ id, image, title, shortDescription }) => {
   return (
     <li className={s.card}>
-      <div className={s.cardWrapper}>
-        <Link
-          to={`/project/${id}`}
-          state={{ background: location }}
-        >
-          <LazyLoadImage
-            alt="card-img"
-            effect="blur"
-            src={image.src}
-            width="100%"
-            style={{ minHeight: '10rem' }}
-            placeholderSrc={image.placeholderSrc}
-          />
-        </Link>
+      <Link to={`/project/${id}`} className={s.cardWrapper}>
+        <LazyLoadImage
+          alt={title}
+          effect="blur"
+          src={image.src}
+          width="100%"
+          style={{ minHeight: '10rem' }}
+          placeholderSrc={image.placeholderSrc}
+        />
 
         <div className={s.cardBody}>
           <h3 className={s.title}>{title}</h3>
-          <p className={s.description}>{description}</p>
+          <p className={s.description}>{shortDescription}</p>
         </div>
-      </div>
+      </Link>
     </li>
   );
 };

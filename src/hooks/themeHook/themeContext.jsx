@@ -8,38 +8,36 @@ import {
 const DARK_LOCAL_STORAGE_KEY = 'dark';
 
 export const ThemeContext = createContext({
-  dark: true,
-  toggle: () => {},
+  dark: false, // light default
+  toggleTheme: () => {},
 });
 
 export const ThemeProvider = ({ children }) => {
-  const [dark, setDark] = useState(true); // dark by default
+  const [dark, setDark] = useState(false); // ✅ light by default
 
   const toggleTheme = useCallback(() => {
     setDark((prevDark) => {
+      const nextDark = !prevDark;
+
       localStorage.setItem(
         DARK_LOCAL_STORAGE_KEY,
-        JSON.stringify(!prevDark),
+        JSON.stringify(nextDark),
       );
 
-      document.body.classList.toggle('dark', !prevDark);
-      document.body.classList.toggle('light', prevDark);
+      document.body.classList.toggle('dark', nextDark);
+      document.body.classList.toggle('light', !nextDark);
 
-      return !prevDark;
+      return nextDark;
     });
   }, []);
 
   useEffect(() => {
-    const localValue = JSON.parse(
-      localStorage.getItem(DARK_LOCAL_STORAGE_KEY),
-    );
+    const localValueRaw = localStorage.getItem(DARK_LOCAL_STORAGE_KEY);
+    const localValue =
+      localValueRaw === null ? null : JSON.parse(localValueRaw);
 
-    if (localValue === null) {
-      document.body.classList.add('dark');
-    } else {
-      setDark(localValue);
-      document.body.classList.add(localValue ? 'dark' : 'light');
-    }
+    // ✅ Om inget sparat: starta i light
+  
   }, []);
 
   return (

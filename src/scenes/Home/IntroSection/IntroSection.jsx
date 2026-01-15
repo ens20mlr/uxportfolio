@@ -28,7 +28,7 @@ const IntroSection = () => {
               My skills include {' '}
               <i>
                 <b className={s.purple}>
-                  TypeScript, React, React Native,
+                  Figma, React, React Native,
                 </b>
               </i>
               <br />
@@ -58,32 +58,7 @@ const IntroSection = () => {
           Feel free to <span className={s.purple}>connect </span>with
           me
         </p>
-        <ul className={s.socialLinks}>
-          <li className={s.socialLink}>
-            <a
-              href="https://github.com/ens20mlr"
-              target="_blank"
-              rel="noreferrer"
-              className={s.socialIcon}
-              aria-label="github"
-            >
-              <AiFillGithub />
-            </a>
-          </li>
-          
-         
-          <li className={s.socialLink}>
-            <a
-              href="https://www.linkedin.com/in/mikaelmeader/"
-              target="_blank"
-              rel="noreferrer"
-              className={s.socialIcon}
-              aria-label="linkedin"
-            >
-              <FaLinkedinIn />
-            </a>
-          </li>
-        </ul>
+       
       </div>
     </section>
   );

@@ -33,8 +33,17 @@
 
 .pdfWrapper {
   width: 100%;
+  max-width: 900px; /* Minska maxbredden på CV-bilden */
+  margin: 2rem auto; /* Centrera den på sidan */
   padding: 1rem 0;
 }
+@media (max-width: 600px) {
+  .pdfWrapper {
+    max-width: 100%; // fyller hela skärmen på små enheter
+    padding: 1rem 0;
+  }
+}
+
 
 .downloadText {
   margin-left: 8px;

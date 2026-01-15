@@ -11,6 +11,22 @@
 .mobile {
   display: none;
 }
+.name {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--txt);
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+
+.desktop {
+  display: flex;
+  align-items: center;
+}
+
+.mobile {
+  font-size: 1.2rem;
+}
 
 @media (max-width: 768px) {
   .desktop {

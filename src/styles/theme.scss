@@ -1,63 +1,107 @@
 .light {
-  --txt: #000;
-  --txt-secondary: #9c33f5;
-  --txt-sec-darker: #9c55f1;
-  --bg-layout-home: linear-gradient(307deg, transparent 0%, transparent 57%, #ffffff 57%, #f8f8f8 100%), linear-gradient(to bottom, #ffffff 0%, #f8f8f8 100%);
+  /* Text */
+  --txt: #111827;                 /* slate-900 */
+  --txt-secondary: #4f46e5;       /* indigo-600 (accent) */
+  --txt-sec-darker: #4338ca;      /* indigo-700 */
+
+  /* Layout backgrounds */
+  --bg-layout-home: linear-gradient(to bottom, #ffffff 0%, #f8fafc 100%);
   --bg-home-section-main: none;
-  --bg-layout-base: linear-gradient(307deg, transparent 0%, transparent 57%, #ffffff 57%, #f8f8f8 100%), linear-gradient(to bottom, #ffffff 0%, #f8f8f8 100%);
-  --bg-primary: #fafafa;
-  --bg: #9c47f5;
-  --bg-active: rgba(109,32,197,.84);
-  --bg-header: transparent;
+  --bg-layout-base: linear-gradient(to bottom, #ffffff 0%, #f8fafc 100%);
+
+  /* Surfaces */
+  --bg-primary: #ffffff;
+  --bg: #f8fafc;                 /* page background */
+  --bg-active: rgba(79, 70, 229, 0.10);
+
+  /* Header/Footer */
+  --bg-header: rgba(255, 255, 255, 0.75);
   --bg-footer: transparent;
-  --backdrop: rgba(0, 0, 0, 0.8);
-  --card-shadow: rgba(129, 72, 144, 0.1);
-  --primary: #9c47f5;
-  --border-primary: #9c47f5;
-  --logo-primary: #9c47f5;
-  --social-icon: #9c47f5;
-  --social-shadow: #9c47f5;
-  --preloader: #fafafa;
-  --bg-modal: #fafafa;
-  --modal-border: none;
-  --modal-close: #9c47f5;
-  --modal-close-icon: #fff;
-  --drawer-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
-  --btn: #9c60f5;
-  --btn-hover: #9c47f5;
-  --btn-primary-txt: #fff;
-  --tags: #9c60f5;
-  --tags-txt: #fff;
-  --toggle-theme: #000;
+
+  /* Effects */
+  --backdrop: rgba(17, 24, 39, 0.55);
+  --card-shadow: rgba(15, 23, 42, 0.08);
+
+  /* Accent / brand */
+  --primary: #4f46e5;             /* indigo-600 */
+  --border-primary: rgba(79, 70, 229, 0.35);
+  --logo-primary: #4f46e5;
+  --social-icon: #4f46e5;
+  --social-shadow: rgba(79, 70, 229, 0.25);
+
+  /* Loading / modal */
+  --preloader: #ffffff;
+  --bg-modal: rgba(255, 255, 255, 0.92);
+  --modal-border: 1px solid rgba(15, 23, 42, 0.08);
+  --modal-close: #111827;
+  --modal-close-icon: #ffffff;
+
+  /* Drawer */
+  --drawer-shadow: 0 16px 40px rgba(15, 23, 42, 0.10);
+
+  /* Buttons */
+  --btn: #111827;                 /* dark button on light theme */
+  --btn-hover: #0b1220;
+  --btn-primary-txt: #ffffff;
+
+  /* Tags */
+  --tags: rgba(79, 70, 229, 0.12);
+  --tags-txt: #3730a3;
+
+  /* Theme toggle */
+  --toggle-theme: #111827;
 }
 
 .dark {
-  --txt: #e4e1ff; 
-  --txt-secondary: #bb86fc; 
-  --txt-sec-darker: #9c47f5; 
-  --bg-layout-home: linear-gradient(to left, rgb(30, 18, 46), rgb(15, 8, 39));
-  --bg-home-section-main: linear-gradient(to left, rgb(30, 18, 46), rgb(15, 8, 39)); 
-  --bg-layout-base: linear-gradient(to left, rgb(15, 8, 39), rgb(15, 8, 3));
-  --bg-primary: linear-gradient(to left, rgb(30, 18, 46), rgb(15, 8, 39));
-  --bg: rgb(33, 24, 56);
-  --bg-active: rgba(178, 121, 216, 0.859);
-  --backdrop: rgba(10, 5, 25, 0.75);
-  --card-shadow: rgba(40, 32, 62, 0.7);
-  --primary: #bb86fc; 
-  --border-primary: #bb86fc; 
-  --logo-primary: #bb86fc; 
-  --social-icon: #9c47f5; 
-  --social-shadow: #9c47f5; 
-  --preloader: black;
-  --bg-modal:  rgba(1, 1, 29, 0.9); 
-  --modal-border: 1px solid rgba(255, 255, 255, 0.1); 
-  --modal-close: RGB(35, 23, 59); 
-  --modal-close-icon: #fff; 
-  --drawer-shadow: 0 2px 8px rgba(0, 0, 0, 0.4); 
-  --btn: #623686;
-  --btn-hover:#623799;
-  --btn-primary-txt: #fff; 
-  --tags: rgb(129 72 144 / 56%);
-  --tags-txt: #fff; 
-  --toggle-theme: #fff; 
+  /* Text */
+  --txt: #e5e7eb;                 /* gray-200 */
+  --txt-secondary: #a5b4fc;       /* indigo-300 */
+  --txt-sec-darker: #818cf8;      /* indigo-400 */
+
+  /* Layout backgrounds */
+  --bg-layout-home: linear-gradient(to bottom, #0b1220 0%, #0f172a 100%);
+  --bg-home-section-main: none;
+  --bg-layout-base: linear-gradient(to bottom, #0b1220 0%, #0f172a 100%);
+
+  /* Surfaces */
+  --bg-primary: rgba(255, 255, 255, 0.04);
+  --bg: #0b1220;                  /* page background */
+  --bg-active: rgba(165, 180, 252, 0.14);
+
+  /* Header/Footer */
+  --bg-header: rgba(11, 18, 32, 0.65);
+  --bg-footer: transparent;
+
+  /* Effects */
+  --backdrop: rgba(0, 0, 0, 0.65);
+  --card-shadow: rgba(0, 0, 0, 0.35);
+
+  /* Accent / brand */
+  --primary: #a5b4fc;             /* indigo-300 */
+  --border-primary: rgba(165, 180, 252, 0.28);
+  --logo-primary: #a5b4fc;
+  --social-icon: #a5b4fc;
+  --social-shadow: rgba(165, 180, 252, 0.20);
+
+  /* Loading / modal */
+  --preloader: #0b1220;
+  --bg-modal: rgba(11, 18, 32, 0.88);
+  --modal-border: 1px solid rgba(255, 255, 255, 0.08);
+  --modal-close: #e5e7eb;
+  --modal-close-icon: #0b1220;
+
+  /* Drawer */
+  --drawer-shadow: 0 18px 50px rgba(0, 0, 0, 0.55);
+
+  /* Buttons */
+  --btn: #a5b4fc;                 /* accent button on dark theme */
+  --btn-hover: #818cf8;
+  --btn-primary-txt: #0b1220;
+
+  /* Tags */
+  --tags: rgba(165, 180, 252, 0.12);
+  --tags-txt: #e5e7eb;
+
+  /* Theme toggle */
+  --toggle-theme: #e5e7eb;
 }

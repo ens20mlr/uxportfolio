@@ -1,7 +1,6 @@
 import { lazy, Suspense } from 'react';
-import { Route, Routes, useLocation } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Preloader from '../components/UIElements/Preloader/Preloader';
-import ModalProjectCard from '../scenes/Projects/ModalProjectCard/ModalProjectCard';
 
 export const routes = {
   Home: '/',
@@ -16,6 +15,9 @@ const scenes = {
   About: lazy(() => import('../scenes/About/About')),
   Projects: lazy(() => import('../scenes/Projects/Projects')),
   Resume: lazy(() => import('../scenes/Resume/Resume')),
+  ProjectDetails: lazy(() =>
+    import('../scenes/Projects/ProjectDetails/ProjectDetails')
+  ),
 };
 
 function LazyScene({ name }) {
@@ -28,43 +30,16 @@ function LazyScene({ name }) {
 }
 
 function RootRoutes() {
-  const location = useLocation();
-  const background = location.state?.background;
-
   return (
-    <>
-      <Routes location={background || location}>
-        <Route
-          path={routes.Home}
-          element={<LazyScene name="Home" />}
-        />
-        <Route
-          path={routes.About}
-          element={<LazyScene name="About" />}
-        />
-        <Route
-          path={routes.Projects}
-          element={<LazyScene name="Projects" />}
-        />
-        <Route
-          path={routes.Resume}
-          element={<LazyScene name="Resume" />}
-        />
-        <Route
-          /*Modal*/ path={routes.Project}
-          element={<ModalProjectCard />}
-        />
-      </Routes>
+    <Routes>
+      <Route path={routes.Home} element={<LazyScene name="Home" />} />
+      <Route path={routes.About} element={<LazyScene name="About" />} />
+      <Route path={routes.Projects} element={<LazyScene name="Projects" />} />
+      <Route path={routes.Resume} element={<LazyScene name="Resume" />} />
 
-      {background && (
-        <Routes>
-          <Route
-            path={routes.Project}
-            element={<ModalProjectCard />}
-          />
-        </Routes>
-      )}
-    </>
+      {/* NY SIDA för project */}
+      <Route path={routes.Project} element={<LazyScene name="ProjectDetails" />} />
+    </Routes>
   );
 }
 

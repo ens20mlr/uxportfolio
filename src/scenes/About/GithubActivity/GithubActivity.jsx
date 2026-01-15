@@ -115,7 +115,7 @@ export default function DomeGallery({
   minRadius = 600,
   maxRadius = Infinity,
   padFactor = 0.25,
-  overlayBlurColor = '#060010',
+  overlayBlurColor = 'transparent',
   maxVerticalRotationDeg = DEFAULTS.maxVerticalRotationDeg,
   dragSensitivity = DEFAULTS.dragSensitivity,
   enlargeTransitionMs = DEFAULTS.enlargeTransitionMs,
@@ -160,6 +160,15 @@ export default function DomeGallery({
   }, []);
 
   const items = useMemo(() => buildItems(images, segments), [images, segments]);
+  useEffect(() => {
+    const unique = Array.from(new Set(images.map(img => (typeof img === "string" ? img : img.src)).filter(Boolean)));
+    unique.forEach(src => {
+      const im = new Image();
+      im.decoding = "async";
+      im.src = src;
+    });
+  }, [images]);
+  
 
   const applyTransform = (xDeg, yDeg) => {
     const el = sphereRef.current;
