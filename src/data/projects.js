@@ -152,6 +152,43 @@ Future updates for BrainFunc Beats include implementing a colorblind mode, addin
       '#api',
     ],
   },
+
+
+
+  {
+    id: '5',
+    title: 'Physical manifesto',
+    shortDescription:
+      'A collaborative physical computing project exploring how intelligent technology and interaction design can challenge urban identity and activate public space through embodied, responsive installations.',
+      fullDescription: `Physical Manifesto is a collaborative project developed together with an architecture student, exploring how intelligent technology can challenge urban identity and reimagine the public town square in the age of AI.
+
+The project investigates how physical, interactive installations can act as catalysts for reflection, participation, and community engagement in public space. Rather than using AI as a purely digital or abstract system, the focus was on making intelligent technology tangible, accessible, and embodied through physical interaction.
+
+My contribution to the project was the design and development of a physical interactive prototype. I programmed an ESP32 microcontroller with flash memory and integrated a light sensor to detect user interaction. When a visitor placed their hand inside the installation, the sensor triggered an LED system that illuminated the interior of the box, inviting exploration and revealing curated visual content.
+
+Inside the installation, users could choose between different images, each representing alternative interpretations of urban identity, public space, and future city narratives. The interaction was intentionally simple and intuitive, emphasizing bodily presence and curiosity rather than screens or instructions.
+
+The installation was designed to function as a physical manifesto — a statement about how responsive technology can support more human-centered, reflective, and participatory urban environments. By combining architecture, interaction design, and embedded systems, the project demonstrates how intelligent technology can be used not to dominate public space, but to invite dialogue and engagement within it.`,
+      
+    image: {
+      src: '/images/collab.jpg',
+      placeholderSrc:
+        '/images/collab.jpg',
+    },
+    links: {
+      // site: 'https://din-länk-här.com',
+      // repo: 'https://github.com/ditt-repo',
+    },
+    technologies: [
+      '#ai',
+      '#machine-learning',
+      '#data',
+      '#prediction',
+      '#ux',
+      '#react',
+      '#api',
+    ],
+  },
 ];
 
 export default data;

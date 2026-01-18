@@ -16,6 +16,10 @@ import { SiAdobeindesign } from '@react-icons/all-files/si/SiAdobeindesign';
 import { DiJava } from '@react-icons/all-files/di/DiJava';
 import { SiC } from '@react-icons/all-files/si/SiC';
 import { SiCplusplus } from '@react-icons/all-files/si/SiCplusplus';
+import { SiAdobeillustrator } from '@react-icons/all-files/si/SiAdobeillustrator';
+
+import { SiGithub } from '@react-icons/all-files/si/SiGithub';
+
 
 
 import s from './TechSkills.module.scss';
@@ -58,7 +62,10 @@ const TechSkills = () => {
       <li className={s.techIcon}>
         <DiGit />
       </li>
-  
+      <li className={s.techIcon}><SiGithub /></li>
+
+<li className={s.techIcon}><SiAdobeillustrator /></li>
+
     </ul>
   );
 };

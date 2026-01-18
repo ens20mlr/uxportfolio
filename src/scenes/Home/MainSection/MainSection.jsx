@@ -1,6 +1,6 @@
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import handIcon from '../../../assets/hand.png';
-const profileImage = '/images/me.jpeg';
+const profileImage = '/images/mee.PNG';
 import Typewriter from '../../../components/UIElements/Typewriter/Typewriter';
 import s from './MainSection.module.scss';
 
