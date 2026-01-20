@@ -3,15 +3,14 @@ import s from './About.module.scss';
 import AboutTextCard from './AboutTextCard/AboutTextCard';
 import TechSkills from './TechSkills/TechSkills';
 import BounceCards from '../components/BounceCards';
-import GithubActivity from './GithubActivity/GithubActivity'; // DomeGallery längst ner
 
 const About = () => {
   const images = [
-    '/images/me1.png',
-    '/images/img1.jpg',
-    '/images/img2.png',
-    '/images/me.jpeg',
-    '/images/img7.png',
+    '/images/myself.webp',
+    '/images/img1.webp',
+    '/images/img2.webp',
+    '/images/me.webp',
+    '/images/img7.webp',
   ];
 
   const transformStyles = [
