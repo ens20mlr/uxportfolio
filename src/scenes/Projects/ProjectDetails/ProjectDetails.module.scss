@@ -17,6 +17,17 @@
     }
   }
   
+  .paragraph {
+    max-width: 70ch;
+    margin: 0 auto 1.5rem;   /* ✅ centrerar blocket + spacing */
+    line-height: 1.75;
+    font-size: 1.05rem;
+    color: var(--txt);
+    text-align: left;
+    white-space: pre-line;  /* ✅ gör att dina \n i texten blir riktiga radbrytningar */
+  }
+  
+  
   .hero {
     border-radius: 18px;
     overflow: hidden;
@@ -44,14 +55,7 @@
     margin-bottom: 1rem;
   }
   
-  .paragraph {
-    color: var(--txt);
-    opacity: 0.92;
-    line-height: 1.75;
-    font-size: 1.05rem;
-    margin: 0 0 1rem;
-    max-width: 75ch;
-  }
+
   
   .tech {
     margin-top: 1.25rem;

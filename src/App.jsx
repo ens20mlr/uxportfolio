@@ -1,11 +1,14 @@
 import { BrowserRouter as Router } from 'react-router-dom';
 import RootRoutes from './routes/RootRoutes';
 import './styles/main.scss';
+import MobileGuard from './components/MobileGuard/MobileGuard';
 
 const App = () => {
   return (
     <Router>
-      <RootRoutes />
+     <MobileGuard>
+        <RootRoutes />
+      </MobileGuard>
     </Router>
   );
 };

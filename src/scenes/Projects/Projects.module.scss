@@ -5,6 +5,15 @@
   align-items: center;
   flex-direction: column;
 }
+.paragraph {
+  max-width: 70ch;          // 🔥 superviktigt för läsbarhet
+  line-height: 1.75;
+  font-size: 1.05rem;
+  color: var(--txt);
+  text-align: left;         // 🚫 INTE justify
+  margin-bottom: 1.5rem;
+}
+
 
 .title {
   color: var(--txt);
@@ -24,6 +33,7 @@
   flex-wrap: wrap;
   padding-bottom: 10px
 }
+
 
 .purple {
   color: var(--txt-secondary);
